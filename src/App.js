@@ -7,7 +7,7 @@ function App() {
     return (
       <PayPalScriptProvider
         options={{
-          "client-id": `${process.env.EQUB_PUBLIC_PAYPAL_CLIENT_ID}`,
+          "client-id": `${process.env.REACT_APP_EQUB_PUBLIC_PAYPAL_CLIENT_ID}`,
         }}
       >
         <PayPalButtons
@@ -55,6 +55,7 @@ function App() {
   }
   return (
     <div className="App">
+      <p>{`${process.env.REACT_APP_EQUB_PUBLIC_PAYPAL_CLIENT_ID}`}</p>
       <Paypal />
     </div>
   );
